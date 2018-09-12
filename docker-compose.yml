@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres-redis:
+    build: .
+    container_name: postgres-redis
+    #network_mode: host
+    links:
+        - redis
+    ports:
+        - "127.0.0.1:5432:5432"
+  redis:
+      image: redis
+      container_name: redis
+      ports:
+          - "127.0.0.1:6379:6379"

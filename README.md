@@ -1,4 +1,4 @@
-# rungeict/postgres-redis
+# docker-postgres-redis
 Postgres image with redis_fdw compiled and installed
 
 ## Introduction
@@ -27,3 +27,9 @@ https://github.com/pg-redis-fdw/redis_fdw
  ``` 
  docker run -d --name=postgres -p 5342:5432 --restart=always rungeict/postgres-redis
  ```
+
+## test
+
+1. setup test env: `docker-compose up --build -d`
+
+2. see `test.sql` for usage
